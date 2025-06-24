@@ -223,7 +223,7 @@ class Accumulator(object):
                 self.values[k] = v.copy() if isinstance(v, list) else v
                 self.counter[k] = len(v) if isinstance(v, list) else 0
 
-def compute_metrics(pred_dir="cyclic_results/confident_predictions", gt_dir="/kaggle/working/updated_kaggle/data/VISION24/SegmentationClassAug", test_list="lists/vision24/test.txt", n_class=12, verbose=0, output_file="metrics_results.txt",shortcut):
+def compute_metrics(pred_dir="cyclic_results/confident_predictions", gt_dir="/kaggle/working/updated_kaggle/data/VISION24/SegmentationClassAug", test_list="lists/vision24/test.txt", n_class=12, verbose=0, output_file="metrics_results.txt",shortcut="short"):
     """
     Compute IoU, catch rate, yield rate, and mIoU for predicted masks against ground truth masks, using class labels from test.txt.
 
